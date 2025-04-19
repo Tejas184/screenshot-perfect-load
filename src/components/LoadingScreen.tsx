@@ -16,7 +16,7 @@ const LoadingScreen = () => {
     tl.to({ value: 0 }, {
       value: 100,
       duration: 5,
-      ease: "linear",
+      ease: "elastic.out(1, 0.3)", // Add bouncy effect
       onUpdate: function() {
         setProgress(this.targets()[0].value);
       },
@@ -39,18 +39,18 @@ const LoadingScreen = () => {
       className="min-h-screen bg-black flex flex-col items-center justify-center px-4 space-y-8"
     >
       {/* Logo placeholder */}
-      <Skeleton className="w-32 h-32 rounded-full bg-white/10" />
+      <Skeleton className="w-24 h-24 rounded-full bg-white/10" />
       
-      {/* Progress bar */}
-      <div className="w-full max-w-md space-y-4">
+      {/* Progress bar container */}
+      <div className="w-full max-w-[200px] space-y-4">
         <Progress 
           value={progress} 
-          className="h-2 bg-white/20" 
+          className="h-3 bg-white/20 rounded-full" 
         />
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-white text-center text-lg"
+          className="text-white text-center text-xl font-comic"
         >
           Loading...
         </motion.p>

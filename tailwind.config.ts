@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -70,6 +71,7 @@ export default {
         'stars': "url('/lovable-uploads/8ad36500-9386-469e-9f7d-5644eaab262d.png')",
       },
       fontFamily: {
+        'comic': ['"Comic Neue"', 'cursive'],
         'montserrat': ['Montserrat', 'sans-serif'],
       },
       borderRadius: {

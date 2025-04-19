@@ -36,14 +36,18 @@ const LoadingScreen = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-deep-navy flex flex-col items-center justify-center px-4 space-y-8"
+      className="min-h-screen bg-black flex flex-col items-center justify-center px-4 space-y-8"
     >
       {/* Logo placeholder */}
       <Skeleton className="w-32 h-32 rounded-full bg-white/10" />
       
       {/* Progress bar */}
       <div className="w-full max-w-md space-y-4">
-        <Progress value={progress} className="h-2 bg-white/10" />
+        <Progress 
+          value={progress} 
+          className="h-2 bg-white/20" 
+          indicatorClassName="bg-white" 
+        />
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

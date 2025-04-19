@@ -46,7 +46,6 @@ const LoadingScreen = () => {
         <Progress 
           value={progress} 
           className="h-2 bg-white/20" 
-          indicatorClassName="bg-white" 
         />
         <motion.p 
           initial={{ opacity: 0, y: 10 }}

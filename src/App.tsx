@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import Main from "./pages/Main";
 import NotFound from "./pages/NotFound";
+import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   // Create a QueryClient instance inside the component
@@ -31,6 +32,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <CustomCursor />
         <Toaster />
         <Sonner />
         <BrowserRouter>

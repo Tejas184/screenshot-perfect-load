@@ -37,24 +37,31 @@ const CustomCursor = () => {
         `}
       </style>
       <div
-        className="pointer-events-none fixed left-0 top-0 z-50 mix-blend-difference"
-        style={{
-          transform: `translate(${position.x - 16}px, ${position.y - 16}px)`,
-        }}
-      >
-        <div
-          className={`h-8 w-8 rounded-full bg-white transition-transform duration-150 ${
-            isClicking ? 'scale-75' : 'scale-100'
-          }`}
-        />
-      </div>
-      <div
         className="pointer-events-none fixed left-0 top-0 z-50"
         style={{
-          transform: `translate(${position.x - 4}px, ${position.y - 4}px)`,
+          transform: `translate(${position.x}px, ${position.y}px)`,
         }}
       >
-        <div className="h-2 w-2 rounded-full bg-neon-purple" />
+        <svg 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg"
+          className={`transition-transform duration-100 ${isClicking ? 'scale-90' : 'scale-100'}`}
+        >
+          <path 
+            d="M3 3l7.5 7.5M12 21l-7.5-7.5L3 3l9 3 6-6 3 3-6 6 3 9z" 
+            fill="url(#gradientCursor)"
+            stroke="#ffffff"
+            strokeWidth="1.5"
+          />
+          <defs>
+            <linearGradient id="gradientCursor" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#00DBDE" />
+              <stop offset="100%" stopColor="#FC00FF" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </>
   );

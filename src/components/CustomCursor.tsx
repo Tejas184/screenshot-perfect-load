@@ -37,25 +37,24 @@ const CustomCursor = () => {
         `}
       </style>
       <div
-        className="pointer-events-none fixed left-0 top-0 z-50"
+        className="pointer-events-none fixed left-0 top-0 z-50 mix-blend-difference"
         style={{
-          transform: `translate(${position.x}px, ${position.y}px)`,
+          transform: `translate(${position.x - 16}px, ${position.y - 16}px)`,
         }}
       >
-        <svg 
-          width="32" 
-          height="32" 
-          viewBox="0 0 32 32" 
-          xmlns="http://www.w3.org/2000/svg"
-          className={`transition-transform duration-100 ${isClicking ? 'scale-90' : 'scale-100'}`}
-        >
-          <path 
-            d="M4 4l10 10L24 4v10l-10 10h-10l10-10z" 
-            fill="#00DBDE"
-            stroke="#ffffff"
-            strokeWidth="1.5"
-          />
-        </svg>
+        <div
+          className={`h-8 w-8 rounded-full bg-white transition-transform duration-150 ${
+            isClicking ? 'scale-75' : 'scale-100'
+          }`}
+        />
+      </div>
+      <div
+        className="pointer-events-none fixed left-0 top-0 z-50"
+        style={{
+          transform: `translate(${position.x - 4}px, ${position.y - 4}px)`,
+        }}
+      >
+        <div className="h-2 w-2 rounded-full bg-neon-purple" />
       </div>
     </>
   );

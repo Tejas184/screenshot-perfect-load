@@ -51,16 +51,10 @@ const CustomCursor = () => {
         >
           <path 
             d="M4 4l10 10L24 4v10l-10 10h-10l10-10z" 
-            fill="url(#arrowGradient)"
+            fill="#00DBDE"
             stroke="#ffffff"
             strokeWidth="1.5"
           />
-          <defs>
-            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00DBDE" />
-              <stop offset="100%" stopColor="#FC00FF" />
-            </linearGradient>
-          </defs>
         </svg>
       </div>
     </>
